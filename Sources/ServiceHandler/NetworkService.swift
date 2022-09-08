@@ -16,7 +16,7 @@ public class NetworkService: NetworkServiable {
     private let session: URLSession
     private let decoder: JSONDecoder
 
-    init(session: URLSession = .shared, decoder: JSONDecoder = JSONDecoder()) {
+    public init(session: URLSession = .shared, decoder: JSONDecoder = JSONDecoder()) {
         self.session = session
         self.decoder = decoder
     }
