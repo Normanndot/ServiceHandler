@@ -11,8 +11,8 @@ import SwiftUI
 public struct Request<T: Decodable> {
     let request: URLRequest
     let responseType: T.Type
-
-    init(url: URL, httpMethod: HTTPMethod) {
+    
+    public init(url: URL, httpMethod: HTTPMethod) {
         var urlRequest: URLRequest {
             var request = URLRequest(url: url)
             request.httpMethod = httpMethod.string
