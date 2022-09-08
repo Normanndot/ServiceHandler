@@ -13,9 +13,7 @@ public enum HTTPMethod {
     case put(Encodable)
     case patch(Encodable)
     case delete
-}
 
-extension HTTPMethod {
     var string: String {
         switch self {
         case .get: return "get"
