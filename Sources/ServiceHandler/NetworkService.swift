@@ -42,6 +42,9 @@ public class NetworkService: NetworkServiable {
             }
 
             guard let decodedResponse = try? decoder.decode(request.responseType, from: data) else {
+                if data.isEmpty {
+                    return String() as! T
+                }
                 throw RequestError.decode
             }
             return decodedResponse

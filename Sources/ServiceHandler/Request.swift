@@ -32,10 +32,6 @@ public struct Request<T: Decodable> {
     }
 }
 
-//public extension Request where T: Decodable {
-//
-//}
-
 extension Encodable {
     func toJSONData() -> Data? {
         try? JSONEncoder().encode(self)
