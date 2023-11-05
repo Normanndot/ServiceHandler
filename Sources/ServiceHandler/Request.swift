@@ -24,6 +24,12 @@ public struct Request<T: Decodable> {
                 ]
             }
 
+            request.allHTTPHeaderFields = [
+                "Content-Type" : "application/json",
+                "client": "ios",
+                "client-version": "3.999.0"
+            ]
+            
             return request
         }
 
